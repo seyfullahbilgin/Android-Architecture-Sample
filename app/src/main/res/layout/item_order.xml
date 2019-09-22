@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/layoutRoot"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_begin="80dp" />
+
+        <TextView
+            android:id="@+id/textViewDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp"
+            android:includeFontPadding="false"
+            android:text="08"
+            android:textColor="@color/darkGray"
+            android:textSize="50sp"
+            app:layout_constraintEnd_toEndOf="@+id/guideline"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textViewMonth"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:includeFontPadding="false"
+            android:text="Ekim"
+            android:textColor="@color/darkGray"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="@+id/guideline"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textViewDate" />
+
+        <View
+            android:id="@+id/viewVerticalLine"
+            android:layout_width="1dp"
+            android:layout_height="0dp"
+            android:background="@color/darkGray"
+            app:layout_constraintBottom_toBottomOf="@+id/viewRectangle"
+            app:layout_constraintStart_toStartOf="@+id/guideline"
+            app:layout_constraintTop_toTopOf="@+id/textViewDate" />
+
+        <TextView
+            android:id="@+id/textViewMarketName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="10dp"
+            android:text="Yeni Market 1"
+            android:textColor="@color/darkGray"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@+id/viewArrow"
+            app:layout_constraintStart_toStartOf="@+id/guideline"
+            app:layout_constraintTop_toTopOf="@+id/viewVerticalLine" />
+
+        <TextView
+            android:id="@+id/textViewOrderName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="25dp"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:textColor="@color/darkGray"
+            android:textSize="15sp"
+            app:layout_constraintEnd_toStartOf="@+id/textViewPrice"
+            app:layout_constraintStart_toStartOf="@+id/guideline"
+            app:layout_constraintTop_toBottomOf="@+id/textViewMarketName" />
+
+        <View
+            android:id="@+id/viewArrow"
+            android:layout_width="27dp"
+            android:layout_height="27dp"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/ic_arrow"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/textViewMarketName" />
+
+        <TextView
+            android:id="@+id/textViewPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="5dp"
+            android:text="250 TL"
+            android:textColor="@color/darkGray"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/textViewOrderName"
+            app:layout_constraintEnd_toEndOf="@+id/viewArrow"
+            app:layout_constraintTop_toTopOf="@id/textViewOrderName" />
+
+        <View
+            android:id="@+id/viewRectangle"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/rounded_rectangle"
+            app:layout_constraintStart_toStartOf="@id/guideline"
+            app:layout_constraintTop_toBottomOf="@id/textViewOrderName" />
+
+        <TextView
+            android:id="@+id/textViewOrderState"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:includeFontPadding="false"
+            android:text="Hazırlanıyor"
+            android:textColor="@color/yellow"
+            android:textSize="15sp"
+            app:layout_constraintBottom_toBottomOf="@+id/viewRectangle"
+            app:layout_constraintStart_toEndOf="@+id/viewRectangle"
+            app:layout_constraintTop_toTopOf="@+id/viewRectangle" />
+
+        <Space
+            android:id="@+id/space"
+            android:layout_width="wrap_content"
+            android:layout_height="15dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/viewRectangle" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/layoutDetail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="#e1e3e4"
+            android:padding="10dp"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textViewOrderState">
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guidelineChild"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_begin="80dp" />
+
+            <TextView
+                android:id="@+id/textViewOrderDetail"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="25dp"
+                android:text="Sıvı Sabun 250 ml "
+                android:textColor="@color/darkGray"
+                android:textSize="15sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/textViewSummaryPrice"
+                app:layout_constraintStart_toStartOf="@id/guidelineChild"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textViewSummaryPrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="5dp"
+                android:text="250 TL"
+                android:textColor="@color/darkGray"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="0.5dp"
+                android:layout_marginTop="3dp"
+                android:background="@color/darkGray"
+                app:layout_constraintEnd_toEndOf="@id/textViewSummaryPrice"
+                app:layout_constraintStart_toStartOf="@+id/textViewOrderDetail"
+                app:layout_constraintTop_toBottomOf="@+id/textViewOrderDetail" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
+

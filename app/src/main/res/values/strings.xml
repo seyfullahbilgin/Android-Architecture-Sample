@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">KariyerTechChallenge</string>
+    <string name="my_market">Marketim</string>
+    <string name="user_name">Kullanıcı Adı</string>
+    <string name="password">Şifre</string>
+    <string name="log_in">Giriş</string>
+    <string name="remember_me">Beni Hatırla</string>
+    <string name="please_fill_in_the_required_fields_correctly">Lütfen gerekli alanları doğru doldurunuz.</string>
+    <string name="invalid_user_name_or_password">Kullanıcı adı veya şifre hatalı</string>
+    <string name="my_orders">Siparişlerim</string>
+    <string name="log_out">Çıkış Yap</string>
+    <string name="are_you_sure_you_want_to_log_out">\"Çıkış yapmak istediğinizden emin misiniz?</string>
+    <string name="you_have_been_logged_out">Çıkış yaptınız</string>
+    <string name="you_have_been_logged_in">Giriş yaptınız</string>
+    <string name="ok">Tamam</string>
+    <string name="cancel">İptal</string>
+    <string name="sorry_an_error_has_occurred">Üzgünüz, bir hata oluştu!</string>
+    <string name="you_have_not_any_order">Hiç siparişiniz yok!</string>
+</resources>
